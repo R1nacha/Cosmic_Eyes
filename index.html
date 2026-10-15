@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080a14">
+  <meta name="description" content="Cosmic Eyes">
+  <title>Cosmic Eyes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+  <header class="nav">
+    <a class="brand" href="#home"><span class="brand-star">✳</span> Cosmic Eyes</a>
+    <button class="menu-toggle" aria-label="Відкрити меню" aria-expanded="false">☰</button>
+    <nav class="nav-links">
+      <a href="#home">Головна</a>
+      <a href="#spectrum">Спектр</a>
+      <a href="#telescopes">Телескопи</a>
+      <a href="#compare">Порівняння</a>
+      <a href="#facts">Цікаве</a>
+    </nav>
+    <button class="theme-toggle" aria-label="Змінити тему" title="Змінити тему">☾</button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content reveal">
+        <p class="eyebrow">ВІД ВИДИМОГО ДО НЕВИДИМОГО</p>
+        <h1>Які «очі» має<br><em>людина?</em></h1>
+        <p class="hero-subtitle">Телескопи, що відкривають<br>невидимий Всесвіт.</p>
+        <a class="outline-btn" href="#telescopes">Дізнатися більше <span>↗</span></a>
+        <a class="scroll-cue" href="#intro"><span class="mouse">↓</span> Прокрути вниз</a>
+      </div>
+      <div class="hero-image" role="img" aria-label="Барвиста туманність у глибокому космосі"></div>
+      <div class="hero-glow"></div>
+    </section>
+
+    <section class="intro section-pad reveal" id="intro">
+      <div class="section-heading"><span class="number">01</span><span class="line"></span></div>
+      <div class="intro-grid">
+        <div>
+          <h2>За межами <em>видимого</em></h2>
+          <p>Людське око бачить лише невелику частину електромагнітного спектра. Телескопи допомагають досліджувати Всесвіт у різних діапазонах світла — від радіохвиль до гамма-променів.</p>
+          <a class="text-link" href="#spectrum">Дослідити спектр <span>→</span></a>
+        </div>
+        <div class="orbit-art" aria-hidden="true"><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="planet"></div><span class="tiny-star">✦</span></div>
+      </div>
+      <div class="spectrum-card" id="spectrum">
+        <div class="card-topline"><h3>Електромагнітний спектр</h3><span class="mono">01 / 07</span></div>
+        <div class="spectrum-bar" aria-label="Схематичний електромагнітний спектр"></div>
+        <div class="spectrum-labels">
+          <button class="spectrum-item" data-spectrum="radio"><span>〰</span>Радіохвилі</button>
+          <button class="spectrum-item" data-spectrum="micro"><span>◉</span>Мікрохвилі</button>
+          <button class="spectrum-item" data-spectrum="infrared"><span>♨</span>Інфрачервоне</button>
+          <button class="spectrum-item active" data-spectrum="visible"><span>✧</span>Видиме світло</button>
+          <button class="spectrum-item" data-spectrum="uv"><span>☼</span>Ультрафіолет</button>
+          <button class="spectrum-item" data-spectrum="xray"><span>✳</span>Рентгенівське</button>
+          <button class="spectrum-item" data-spectrum="gamma"><span>✦</span>Гамма-промені</button>
+        </div>
+        <div class="spectrum-info" aria-live="polite"><strong id="spectrum-title">Видиме світло</strong><p id="spectrum-desc">Саме цю частину спектра сприймають наші очі. Телескоп Hubble робить детальні знімки зір і галактик у видимому світлі.</p></div>
+      </div>
+    </section>
+
+    <section class="telescopes section-pad reveal" id="telescopes">
+      <div class="section-heading"><span class="number">02</span><span class="line"></span><span class="eyebrow">КОСМІЧНІ СПОСТЕРІГАЧІ</span></div>
+      <h2>Різні очі <em>Всесвіту</em></h2>
+      <p class="section-lead">Кожен телескоп бачить космос по-своєму. Разом вони створюють повнішу картину нашого Всесвіту.</p>
+      <div class="telescope-grid">
+        <article class="telescope-card">
+          <div class="card-image hubble"></div><div class="card-body"><p class="card-kicker">VISIBLE / UV</p><h3>Hubble</h3><p>Показує зорі, туманності й далекі галактики у видимому та ультрафіолетовому світлі, а також у частині інфрачервоного діапазону.</p><button class="learn-more" data-modal="hubble">Дізнатися більше <span>↗</span></button></div>
+        </article>
+        <article class="telescope-card">
+          <div class="card-image webb"></div><div class="card-body"><p class="card-kicker">INFRARED</p><h3>James Webb</h3><p>Досліджує інфрачервоне випромінювання, зазирає крізь космічний пил і вивчає ранні галактики.</p><button class="learn-more" data-modal="webb">Дізнатися більше <span>↗</span></button></div>
+        </article>
+        <article class="telescope-card">
+          <div class="card-image chandra"></div><div class="card-body"><p class="card-kicker">X-RAY</p><h3>Chandra</h3><p>Фіксує рентгенівське випромінювання від надзвичайно гарячого газу, чорних дір та залишків наднових.</p><button class="learn-more" data-modal="chandra">Дізнатися більше <span>↗</span></button></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="compare section-pad reveal" id="compare">
+      <div class="section-heading"><span class="number">03</span><span class="line"></span><span class="eyebrow">ОДИН ОБ'ЄКТ — РІЗНІ ДІАПАЗОНИ</span></div>
+      <div class="compare-heading"><div><h2>Один Всесвіт,<br><em>різні погляди</em></h2><p>Уяви, що ми перемикаємо космічні «окуляри» — і той самий об'єкт відкриває нові деталі.</p></div><div class="compare-controls"><button class="compare-btn active" data-view="visible">Видиме світло</button><button class="compare-btn" data-view="infrared">Інфрачервоне</button><button class="compare-btn" data-view="xray">Рентгенівське</button><button class="compare-btn" data-view="combined">Комбіноване</button></div></div>
+      <div class="comparison-visual" id="comparison-visual"><div class="comparison-caption"><span id="view-name">Видиме світло</span><span class="mono">NASA / MULTI-WAVELENGTH</span></div></div>
+      <p class="image-note">Зображення ілюструють різні способи спостереження космосу. Кольори на наукових знімках можуть бути призначені для відображення даних, які людське око не бачить.</p>
+    </section>
+
+    <section class="facts section-pad reveal" id="facts">
+      <div class="section-heading"><span class="number">04</span><span class="line"></span></div>
+      <h2>Ми бачимо більше,<br><em>ніж здається</em></h2>
+      <p class="section-lead">Телескопи розширюють можливості людського зору. Ось кілька причин, чому це важливо.</p>
+      <div class="facts-grid">
+        <article class="fact-card"><span class="fact-icon">◎</span><div><h3>Деякі об'єкти невидимі для очей</h3><p>Холодні хмари пилу можуть випромінювати інфрачервоне світло, а людське око його не сприймає.</p></div></article>
+        <article class="fact-card"><span class="fact-icon">✧</span><div><h3>Дивитися далеко — означає дивитися в минуле</h3><p>Світло має скінченну швидкість, тому ми бачимо далекі космічні об'єкти такими, якими вони були раніше.</p></div></article>
+        <article class="fact-card"><span class="fact-icon">◌</span><div><h3>Одна галактика — багато історій</h3><p>Різні діапазони допомагають вивчати зорі, пил, гарячий газ і активні області однієї галактики.</p></div></article>
+      </div>
+    </section>
+
+    <section class="final-banner reveal">
+      <div>
+        <p class="eyebrow">ПОДИВИСЯ ДАЛІ</p>
+        <h2>Всесвіт більший,<br>ніж ми можемо <em>уявити.</em></h2>
+        <p>Завдяки телескопам людство бачить не лише світло, а й історію космосу.</p>
+        <a class="outline-btn" href="https://science.nasa.gov/mission/webb/" target="_blank" rel="noopener noreferrer">Дослідити Всесвіт <span>↗</span></a>
+      </div>
+      <div class="banner-planet" aria-hidden="true"></div>
+    </section>
+  </main>
+
+  <footer class="footer"><a class="brand" href="#home"><span class="brand-star">✳</span> Cosmic Eyes</a><p>Бачити більше, ніж просто зорі.</p><div class="footer-links"><a href="#home">Головна</a><a href="#telescopes">Телескопи</a><a href="#spectrum">Спектр</a><a href="#compare">Порівняння</a></div><span class="copyright">Навчальний проєкт виконували:<br> Яцик Анастасія, Велика-Козачкова Єлизавета · 2026</span></footer>
+
+  <dialog id="info-modal" class="info-modal"><button class="modal-close" aria-label="Закрити">×</button><p class="eyebrow" id="modal-kicker">COSMIC EYES</p><h2 id="modal-title">Телескоп</h2><p id="modal-text"></p><a id="modal-link" href="https://science.nasa.gov/" target="_blank" rel="noopener noreferrer">Джерело NASA ↗</a></dialog>
+  <script src="script.js"></script>
+</body>
+</html>
